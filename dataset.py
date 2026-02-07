@@ -15,7 +15,7 @@ class ChickenVoiceDataset(Dataset):
           noise/
     and returns (mel_spectrogram, label).
     """
-
+ """ Dataset for loading chicken audio files and converting them to mel spectrograms."""
     def __init__(
         self,
         root_dir: str = "data",
@@ -90,4 +90,5 @@ if __name__ == "__main__":
     if len(ds) > 0:
         x, y = ds[0]
         print("Sample shape:", x.shape)
+
         print("Label index:", y.item())
